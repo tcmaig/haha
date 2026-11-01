@@ -1,0 +1,24 @@
+{
+  "schema_version": 3,
+  "protocol_version": "3.0",
+  "base": "13bfd8ba088ab671978cfc5463f2626a58c6e563",
+  "head": "13bfd8ba088ab671978cfc5463f2626a58c6e563",
+  "implementation_subject": "sha256:93f20f99da513d44e52bd1acd516a5200a8820fc7c2b275409248b419e31294d",
+  "sourceFiles": {
+    "frontend/app/page.tsx": "a66fcba9c301f778a6bd84adbd1ffaf801a6a98fbb03b3f8a79a3f132e577ef7",
+    "frontend/app/globals.css": "69dfc1185381d9cb5408865dafd6139a6cbeaf76c648b8a5ba5d4781f7248615",
+    "frontend/app/cargo-product.tsx": "27eb56ffcc94261a7c639a7af587bb70dca649a78682396c01731307f6b8d296",
+    "frontend/app/cargo.css": "30059c741a4c6d42190d6b4a5640a44d0ef05bcb5c1831956288df020697d291",
+    "frontend/app/api/session/route.ts": "9fdd780b3337ae43924b669bde689a26265680e2e2477c2c53e7ca5df1143383",
+    "frontend/app/labels.ts": "522c633cfdad10b70c0ed99da402290bf5e1fed3f885a1afd1b9c7f85eeaed1f",
+    "frontend/app/handoff.tsx": "40537c42ed8f6eae47a19ffb960b45a1845d5f7029da77bc421f315afa1c0c3d"
+  },
+  "baseline_subject": "sha256:2f84e63b97427992700270994d8912944a79ae1c0ba5e5a5d0687c0f75473a3c",
+  "implementation_render_subject": "sha256:0978f52a798d0750e50f27a3b704c8e83648d22a22b932ef447cc7c77de91816",
+  "renders": {
+    "render-1440.png": "0978f52a798d0750e50f27a3b704c8e83648d22a22b932ef447cc7c77de91816",
+    "render-980.png": "44dc1060d2e3ba2ac761745228dbc2a1988a7a10f3869c90edde514e31ccfa0c",
+    "render-390.png": "5d94b38d3a08ecc0c4b4274c93e79ab3a7bf9c8b4d5f017b9b50c926a074d83b"
+  },
+  "external_effects": "none"
+}

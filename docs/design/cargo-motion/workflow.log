@@ -1,0 +1,10 @@
+
+Running 3 tests using 1 worker
+
+(node:26944) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\workbench.spec.ts:15:7 › real API full internal workflow 1440px (17.9s)
+  ok 2 tests\workbench.spec.ts:15:7 › real API full internal workflow 390px (14.5s)
+  ok 3 tests\workbench.spec.ts:193:5 › server proxy rejects missing session and cross-origin writes (36ms)
+
+  3 passed (34.3s)

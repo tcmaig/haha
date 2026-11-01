@@ -1,0 +1,22 @@
+schema_version: 3
+protocol_version: "3.0"
+id: T-011-local-upstream-update
+status: ready_for_review
+goal: "Update upstream main and local workbench content while preserving the existing design"
+scope: ["Upstream synchronization", "Local UI integration", "Windows compatibility", "Offline deployment verification"]
+non_goals: ["Homepage edits", "Paid models", "Remote publication", "Real external business actions"]
+acceptance: ["Latest fetched main installed", "Existing custom design and data preserved", "Workbenches built and browser checked", "Platform test limitations disclosed"]
+risk: low
+protected_paths: [docs/handoff/]
+context_refs: [docs/local-update/verification.md]
+decision_refs: [docs/local-update/verification.md]
+evidence_refs: [docs/local-update/before.png, docs/local-update/after.png, docs/local-update/verification.md]
+approved_baseline_subject: "sha256:185baffc5bab82ad97a38da24f9529ad3c51a266948975c641d0c56cb3181af1"
+approved_baseline_ref: docs/local-update/before.png
+implementation_render_subject: "sha256:0f18f22fd3bc7287ed064d9e06cc980d8b42de6f781af6230a085323314d13c3"
+implementation_render_ref: docs/local-update/after.png
+baseline_decision_ref: docs/local-update/verification.md
+conformance_status: pending_human_review
+implementation_started: true
+external_effects: none
+updated: "2026-10-31"

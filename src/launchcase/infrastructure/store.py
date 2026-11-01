@@ -4,6 +4,7 @@ import tempfile
 from pathlib import Path
 
 from launchcase.domain.common import DomainError, digest
+from launchcase.infrastructure.file_access import open_original
 
 
 class ObjectStore:
@@ -41,7 +42,7 @@ class ObjectStore:
 
     def get(self, sha: str) -> bytes:
         try:
-            with os.fdopen(os.open(self.path(sha), os.O_RDONLY | os.O_NOFOLLOW), "rb") as f:
+            with open_original(self.path(sha)) as f:
                 data = f.read()
         except OSError as exc:
             raise DomainError("OBJECT_UNAVAILABLE", "Original object is unavailable", 409) from exc

@@ -1,0 +1,25 @@
+schema_version: 3
+protocol_version: "3.0"
+id: T-012-cargo-workbench
+status: tested_local_http
+goal: "Finish the third workbench as a central container surrounded by clickable product illustrations"
+scope: [frontend/app/, frontend/tests/, docs/design/cargo-workbench/, work/active/T-012-cargo-workbench/, project/state.yaml]
+non_goals: [Shared homepage edits, TradeCase edits, CreativeEngine edits, Paid models, New user credentials, External publication, Business data changes]
+acceptance: [Eight recognizable product entrances, Existing steps preserved, No credential or release-label UI, Desktop and mobile browser verification]
+risk: low
+risk_reasons: [local-reversible, no-external-effects]
+protected_paths: [docs/handoff/]
+context_refs: [docs/design/cargo-workbench/decision.md]
+decision_refs: [docs/design/cargo-workbench/decision.md]
+evidence_refs: [docs/design/cargo-workbench/manifest.json, docs/design/cargo-workbench/verification.md, docs/design/cargo-workbench/interaction-result.json, docs/design/cargo-workbench/preview-result.json]
+approved_baseline_subject: "sha256:2f84e63b97427992700270994d8912944a79ae1c0ba5e5a5d0687c0f75473a3c"
+approved_baseline_ref: docs/design/cargo-workbench/baseline-desktop.png
+implementation_render_subject: "sha256:0978f52a798d0750e50f27a3b704c8e83648d22a22b932ef447cc7c77de91816"
+implementation_render_ref: docs/design/cargo-workbench/render-1440.png
+review_ref: docs/design/cargo-workbench/review.md
+review_current: false
+baseline_decision_ref: docs/design/cargo-workbench/decision.md
+conformance_status: pending_human_review
+implementation_started: true
+external_effects: none
+updated: "2026-11-01"

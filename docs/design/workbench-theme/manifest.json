@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "protocol_version": "3.0",
+  "base": "13bfd8ba088ab671978cfc5463f2626a58c6e563",
+  "head": "13bfd8ba088ab671978cfc5463f2626a58c6e563",
+  "implementation_subject": "sha256:118278f70417953c3d7c76bcd1908423b90cfc75922ef2e4dc8d712560603ea6",
+  "sourceFiles": {
+    "frontend/app/page.tsx": "3824995d44b82e0cb8b53a3cd2d149e6200114d7735a6fd49363e0d21c2b2482",
+    "frontend/app/cargo.css": "4035b2c6ecddc89790ad13c4f7349b5dfce1663498d16d157c70ba6eaa43ab84",
+    "frontend/app/workbench-theme.css": "f67409cf282995ebfc97c33ab02e8c1508ede8cc5241365c287942d81b6ceb1a",
+    "frontend/app/cargo-scene.tsx": "a0d08a46e8cdb9fe03afcf617d1e6502ef92066cd453680e535573e9b2bbe901",
+    "frontend/app/globals.css": "69dfc1185381d9cb5408865dafd6139a6cbeaf76c648b8a5ba5d4781f7248615",
+    "frontend/app/api/session/route.ts": "9fdd780b3337ae43924b669bde689a26265680e2e2477c2c53e7ca5df1143383"
+  },
+  "baseline_subject": "sha256:facfad42687ff23999b9ed14c1e35be4720a48063e0cbff61605268e17dca226",
+  "implementation_render_subject": "sha256:1c98f32618fd24931c0043289c966afca3ea01d66450c6385d881e403bff275f",
+  "renders": {
+    "projects-1440.png": "9aeded147447f9b8c7fa17d3d8df9ca532602598e07c30777091eb6801994490",
+    "projects-390.png": "276da91ee6c5547bb733cffa7226ef948ca97de6acc39ee13431469c2db3030f",
+    "inbox-1440.png": "1c98f32618fd24931c0043289c966afca3ea01d66450c6385d881e403bff275f",
+    "inbox-390.png": "96c488d0b536bf7b2054cc5a1ba14e8afc80252a9af4f17b24af5279a5b2c5cd",
+    "settings-1440.png": "70d962a864760923235917ac8a8fd5203f3c217d33b1add726b176ea43c920c3",
+    "settings-390.png": "9db1c16187d669111892aff485d68ea43d133122549840e902dadff3fbb19937",
+    "overview-1440.png": "85eb9401a4db178b57caffca74b07976450b3fa4496b5e0970346479b9a3feac",
+    "overview-390.png": "39a003d4a9543863536971269790242d164c9b827c6fa82b7b7caa71d4d5eb56",
+    "sources-1440.png": "48d54f83c87e584fdce799a6a9843317a35c83b4bbe25c8040d862d479b0cc6c",
+    "sources-390.png": "0faa3652134bc2029a32dab20111996115526fcd19fdd92bda38604a34d312b2"
+  },
+  "external_effects": "none"
+}

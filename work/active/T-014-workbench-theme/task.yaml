@@ -1,0 +1,25 @@
+schema_version: 3
+protocol_version: "3.0"
+id: T-014-workbench-theme
+status: tested_local_http
+goal: "Keep the accepted navy workbench theme across all navigation and project detail pages"
+scope: [frontend/app/page.tsx, frontend/app/cargo.css, frontend/app/workbench-theme.css, project/state.yaml, work/active/T-013-cargo-motion/task.yaml, work/active/T-014-workbench-theme/, docs/design/workbench-theme/]
+non_goals: [Shared homepage changes, Cargo animation redesign, Navigation or workflow changes, Backend changes, New credentials, Paid services, Publication]
+acceptance: [Same shell theme across five navigation pages, Dark readable detail surfaces and forms, Accepted cargo scene preserved, Desktop and mobile checks, Original workflow regression]
+risk: low
+risk_reasons: [local-reversible, no-external-effects]
+protected_paths: [docs/handoff/]
+context_refs: [docs/design/workbench-theme/decision.md]
+decision_refs: [docs/design/workbench-theme/decision.md]
+evidence_refs: [docs/design/workbench-theme/manifest.json, docs/design/workbench-theme/verification.md, docs/design/workbench-theme/theme-results.json, docs/design/workbench-theme/preview-results.json]
+approved_baseline_subject: "sha256:facfad42687ff23999b9ed14c1e35be4720a48063e0cbff61605268e17dca226"
+approved_baseline_ref: docs/design/workbench-theme/baseline-projects.png
+implementation_render_subject: "sha256:1c98f32618fd24931c0043289c966afca3ea01d66450c6385d881e403bff275f"
+implementation_render_ref: docs/design/workbench-theme/inbox-1440.png
+review_ref: docs/design/workbench-theme/review.md
+review_current: true
+baseline_decision_ref: docs/design/workbench-theme/decision.md
+conformance_status: pending_human_review
+implementation_started: true
+external_effects: none
+updated: "2026-11-01"

@@ -1,0 +1,85 @@
+{
+  "base": "http://127.0.0.1:3314",
+  "viewports": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "readoutClear": true
+    },
+    {
+      "width": 980,
+      "overflow": false,
+      "violations": [],
+      "readoutClear": true
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "readoutClear": true
+    }
+  ],
+  "routes": [
+    {
+      "commodity": "文具",
+      "step": "证据来源",
+      "selected": true,
+      "originalDetailTheme": true
+    },
+    {
+      "commodity": "家电",
+      "step": "用户反馈研究",
+      "selected": true,
+      "originalDetailTheme": true
+    },
+    {
+      "commodity": "零部件",
+      "step": "产品机会",
+      "selected": true,
+      "originalDetailTheme": true
+    },
+    {
+      "commodity": "五金工具",
+      "step": "产品方案与规格",
+      "selected": true,
+      "originalDetailTheme": true
+    },
+    {
+      "commodity": "电子组件",
+      "step": "成本与风险",
+      "selected": true,
+      "originalDetailTheme": true
+    },
+    {
+      "commodity": "视觉样件",
+      "step": "概念图片",
+      "selected": true,
+      "originalDetailTheme": true
+    },
+    {
+      "commodity": "样品箱",
+      "step": "样品与交接",
+      "selected": true,
+      "originalDetailTheme": true
+    },
+    {
+      "commodity": "包装材料",
+      "step": "内部交接资料",
+      "selected": true,
+      "originalDetailTheme": true
+    }
+  ],
+  "errors": [],
+  "motion": {
+    "floating": true,
+    "hoverRoute": true,
+    "pause": true,
+    "resume": true,
+    "reduced": true,
+    "keyboard": true
+  },
+  "success": true,
+  "overview": true,
+  "httpOnly": true
+}

@@ -1,5 +1,8 @@
 "use client";
 import HandoffWorkspace from "./handoff";
+import CargoScene from "./cargo-scene";
+import "./cargo.css";
+import "./workbench-theme.css";
 import {
   activityLabel,
   blockerLabel,
@@ -143,7 +146,7 @@ function Meta({ label, value }: { label: string; value: React.ReactNode }) {
 
 export default function Workbench() {
   const [authenticated, setAuthenticated] = useState(false),
-    [token, setToken] = useState(""),
+    [sessionReady, setSessionReady] = useState(false),
     [cases, setCases] = useState<Item[]>([]),
     [current, setCurrent] = useState<Item | null>(null),
     [data, setData] = useState<Record<string, Item[]>>({}),
@@ -153,6 +156,7 @@ export default function Workbench() {
     [notice, setNotice] = useState(""),
     [busy, setBusy] = useState(false),
     [newCase, setNewCase] = useState(false),
+    [pendingStep, setPendingStep] = useState<string | null>(null),
     [brief, setBrief] = useState(emptyBrief),
     [review, setReview] = useState<Review | null>(null),
     [reason, setReason] = useState(""),
@@ -220,7 +224,8 @@ export default function Workbench() {
             api("capabilities").then(setCapabilities),
           );
       })
-      .catch(() => {});
+      .catch(() => {})
+      .finally(() => setSessionReady(true));
   }, [api, loadCases]);
   useEffect(() => {
     if (review || newCase || specEdit || costEdit) {
@@ -239,13 +244,27 @@ export default function Workbench() {
       setBusy(false);
     }
   };
-  const openCase = (id: string) =>
+  const openCase = (id: string, initialTab = "总览") =>
     act(async () => {
       setScreen("cases");
-      setTab("总览");
+      setTab(initialTab);
       setExcerpt(null);
       await load(id);
     });
+  const openStep = (step: string) => {
+    setScreen("cases");
+    if (current) {
+      setTab(step);
+      return;
+    }
+    if (cases.length) {
+      openCase(cases[0].id, step);
+      return;
+    }
+    setPendingStep(step);
+    setBrief(emptyBrief);
+    setNewCase(true);
+  };
   const items = (kind: string) => data[kind] || [];
   const activeGate = (gate: string) =>
     items("gates")
@@ -503,15 +522,18 @@ export default function Workbench() {
   const closeDialog = () => {
     setReview(null);
     setNewCase(false);
+    setPendingStep(null);
     setSpecEdit(null);
     setCostEdit(false);
   };
   const create = () =>
     act(async () => {
+      const nextTab = pendingStep || "证据来源";
       const c = await api("product-cases", brief);
       setNewCase(false);
       await load(c.id);
-      setTab("证据来源");
+      setTab(nextTab);
+      setPendingStep(null);
     });
   const importFile = (file: File) =>
     act(async () => {
@@ -529,78 +551,37 @@ export default function Workbench() {
       await load(current.id);
       setNotice("原文已保存，并建立了逐行引用");
     });
-  const login = () =>
-    act(async () => {
-      const submittedToken = token;
-      setToken("");
-      const r = await fetch("/api/session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token: submittedToken }),
-      });
-      if (!r.ok) throw Error("身份凭证无效，请向工作区管理员确认");
-      setToken("");
-      await loadCases();
-      setCapabilities(await api("capabilities"));
-    });
-
-  if (!authenticated)
+  if (!sessionReady || !authenticated)
     return (
-      <main className="login-shell">
+      <main
+        className="session-state"
+        aria-live="polite"
+        aria-busy={!sessionReady}
+      >
         <div className="login-brand">
           <span className="monogram">LC</span>
           <span>LaunchCase</span>
         </div>
-        <div className="login-copy">
-          <p className="eyebrow">产品开发 · 亚马逊美国站</p>
-          <h1>
-            让产品决策
-            <br />
-            有据可循。
-          </h1>
-          <p>
-            从客户原话，到产品假设，再到可审核的内部草稿。每个结论保留来源，每个关键决定由人确认。
-          </p>
-        </div>
-        <form
-          className="login-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            login();
-          }}
-        >
-          <p className="eyebrow">本地工作区</p>
-          <h2>进入工作台</h2>
-          <label>
-            本地身份凭证
-            <input
-              type="password"
-              autoComplete="off"
-              value={token}
-              onChange={(e) => setToken(e.target.value)}
-              required
-            />
-          </label>
-          <p className="hint">
-            使用工作区管理员发放的身份凭证。凭证不会保存在浏览器页面中。
-          </p>
-          <button className="primary" disabled={busy}>
-            进入工作区 →
+        <p className="eyebrow">本地工作区</p>
+        <h1>{sessionReady ? "工作区暂不可用" : "正在连接工作区"}</h1>
+        <p>
+          {sessionReady
+            ? "本地服务连接失败。确认 LaunchCase 服务已启动后，可重新连接。"
+            : "正在检查本地服务并建立安全会话。"}
+        </p>
+        {sessionReady && (
+          <button
+            className="secondary"
+            onClick={() => window.location.reload()}
+          >
+            重新连接
           </button>
-          {error && (
-            <p role="alert" className="error">
-              {error}
-            </p>
-          )}
-          <div className="login-boundary">
-            默认离线 · 不调用付费服务 · 不自动发布
-          </div>
-        </form>
+        )}
       </main>
     );
 
   return (
-    <div className="app-shell">
+    <div className="app-shell cargo-workbench">
       <a href="#main" className="skip">
         跳至主要内容
       </a>
@@ -653,21 +634,12 @@ export default function Workbench() {
             概念不等于产品事实。
           </p>
         </div>
-        <button
-          className="logout"
-          onClick={() =>
-            act(async () => {
-              await fetch("/api/session", { method: "DELETE" });
-              setAuthenticated(false);
-              setCurrent(null);
-            })
-          }
-        >
-          退出本地会话 ↗
-        </button>
       </aside>
       <main id="main" className="main">
         <header className="topline">
+          <a className="home-link" href="http://127.0.0.1:4320/">
+            ← 返回首页
+          </a>
           <span>
             工作台 <i>/</i> {current ? current.title : "产品项目"}
           </span>
@@ -745,6 +717,7 @@ export default function Workbench() {
                 ＋ 创建产品项目
               </button>
             </div>
+            {screen === "cases" && <CargoScene onStep={openStep} />}
             <div className="portfolio-line">
               <span>
                 {cases.length.toString().padStart(2, "0")}{" "}
@@ -869,36 +842,23 @@ export default function Workbench() {
                 )}
               </div>
             </div>
-            <div className="case-tabs" role="tablist" aria-label="项目内容">
-              {tabGroups.map((group) => (
-                <div
-                  className="tab-group"
-                  role="presentation"
-                  key={group.tabs[0]}
-                >
-                  {group.label && (
-                    <span className="tab-group-label" aria-hidden="true">
-                      {group.label}
-                    </span>
-                  )}
-                  <div role="presentation">
-                    {group.tabs.map((t) => (
-                      <button
-                        key={t}
-                        role="tab"
-                        aria-selected={tab === t}
-                        className={tab === t ? "selected" : ""}
-                        onClick={() => {
-                          setTab(t);
-                          setScreen("cases");
-                        }}
-                      >
-                        {t}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              ))}
+            <div className="case-tabs" role="tablist" aria-label="Case 内容">
+              {tabGroups
+                .flatMap((group) => group.tabs)
+                .map((t) => (
+                  <button
+                    key={t}
+                    role="tab"
+                    aria-selected={tab === t}
+                    className={tab === t ? "selected" : ""}
+                    onClick={() => {
+                      setTab(t);
+                      setScreen("cases");
+                    }}
+                  >
+                    {t}
+                  </button>
+                ))}
             </div>
             <small className="scroll-hint">左右滑动查看更多内容 →</small>
             <section role="tabpanel" aria-label={tab} className="tab-content">

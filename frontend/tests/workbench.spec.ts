@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { readFileSync, mkdirSync } from "node:fs";
+import { mkdirSync } from "node:fs";
 import path from "node:path";
 const root = path.resolve(__dirname, "../..");
 const fixture = path.join(root, "fixtures/scenarios/pet-furniture-us");
@@ -19,16 +19,6 @@ for (const viewport of [
     const errors: string[] = [];
     page.on("pageerror", (e) => errors.push(e.message));
     await page.goto("/");
-    await page
-      .getByLabel("本地身份凭证")
-      .fill(
-        readFileSync(
-          process.env.LAUNCHCASE_TOKEN_FILE ||
-            path.join(root, ".launchcase/browser-token"),
-          "utf8",
-        ).trim(),
-      );
-    await page.getByRole("button", { name: "进入工作区 →" }).click();
     await page.getByRole("button", { name: "＋ 创建产品项目" }).click();
     let dialog = page.getByRole("dialog");
     await dialog.getByRole("button", { name: "载入合成宠物家具示例" }).click();
@@ -37,6 +27,13 @@ for (const viewport of [
       "aria-selected",
       "true",
     );
+    await page.getByRole("button", { name: "产品项目", exact: true }).click();
+    await expect(page.locator(".cargo-scene")).toBeVisible();
+    await page.getByRole("button", { name: "家电 · 用户反馈研究" }).click();
+    await expect(
+      page.getByRole("tab", { name: "用户反馈研究" }),
+    ).toHaveAttribute("aria-selected", "true");
+    await page.getByRole("tab", { name: "证据来源" }).click();
     await page.getByLabel("我有权导入并用于内部研究").check();
     for (const [file, type] of [
       ["synthetic-voc.csv", "review"],

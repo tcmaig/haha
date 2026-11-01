@@ -1,0 +1,147 @@
+{
+  "base": "http://127.0.0.1:3310",
+  "views": [
+    {
+      "width": 1440,
+      "label": "产品项目",
+      "theme": {
+        "backgroundColor": "rgb(8, 18, 31)",
+        "backgroundImage": "radial-gradient(at 85% 5%, rgba(48, 34, 91, 0.36), rgba(0, 0, 0, 0) 38%), none",
+        "ink": "rgb(233, 244, 255)",
+        "paper": "#08121f",
+        "sidebar": "linear-gradient(160deg, rgb(16, 43, 59), rgb(8, 21, 35) 65%)"
+      },
+      "sameTheme": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "label": "审核收件箱",
+      "theme": {
+        "backgroundColor": "rgb(8, 18, 31)",
+        "backgroundImage": "radial-gradient(at 85% 5%, rgba(48, 34, 91, 0.36), rgba(0, 0, 0, 0) 38%), none",
+        "ink": "rgb(233, 244, 255)",
+        "paper": "#08121f",
+        "sidebar": "linear-gradient(160deg, rgb(16, 43, 59), rgb(8, 21, 35) 65%)"
+      },
+      "sameTheme": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "label": "来源与知识",
+      "theme": {
+        "backgroundColor": "rgb(8, 18, 31)",
+        "backgroundImage": "radial-gradient(at 85% 5%, rgba(48, 34, 91, 0.36), rgba(0, 0, 0, 0) 38%), none",
+        "ink": "rgb(233, 244, 255)",
+        "paper": "#08121f",
+        "sidebar": "linear-gradient(160deg, rgb(16, 43, 59), rgb(8, 21, 35) 65%)"
+      },
+      "sameTheme": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "label": "概念图片",
+      "theme": {
+        "backgroundColor": "rgb(8, 18, 31)",
+        "backgroundImage": "radial-gradient(at 85% 5%, rgba(48, 34, 91, 0.36), rgba(0, 0, 0, 0) 38%), none",
+        "ink": "rgb(233, 244, 255)",
+        "paper": "#08121f",
+        "sidebar": "linear-gradient(160deg, rgb(16, 43, 59), rgb(8, 21, 35) 65%)"
+      },
+      "sameTheme": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "label": "能力与设置",
+      "theme": {
+        "backgroundColor": "rgb(8, 18, 31)",
+        "backgroundImage": "radial-gradient(at 85% 5%, rgba(48, 34, 91, 0.36), rgba(0, 0, 0, 0) 38%), none",
+        "ink": "rgb(233, 244, 255)",
+        "paper": "#08121f",
+        "sidebar": "linear-gradient(160deg, rgb(16, 43, 59), rgb(8, 21, 35) 65%)"
+      },
+      "sameTheme": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "label": "产品项目",
+      "theme": {
+        "backgroundColor": "rgb(8, 18, 31)",
+        "backgroundImage": "radial-gradient(at 85% 5%, rgba(48, 34, 91, 0.36), rgba(0, 0, 0, 0) 38%), none",
+        "ink": "rgb(233, 244, 255)",
+        "paper": "#08121f",
+        "sidebar": "linear-gradient(160deg, rgb(16, 43, 59), rgb(8, 21, 35) 65%)"
+      },
+      "sameTheme": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "label": "审核收件箱",
+      "theme": {
+        "backgroundColor": "rgb(8, 18, 31)",
+        "backgroundImage": "radial-gradient(at 85% 5%, rgba(48, 34, 91, 0.36), rgba(0, 0, 0, 0) 38%), none",
+        "ink": "rgb(233, 244, 255)",
+        "paper": "#08121f",
+        "sidebar": "linear-gradient(160deg, rgb(16, 43, 59), rgb(8, 21, 35) 65%)"
+      },
+      "sameTheme": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "label": "来源与知识",
+      "theme": {
+        "backgroundColor": "rgb(8, 18, 31)",
+        "backgroundImage": "radial-gradient(at 85% 5%, rgba(48, 34, 91, 0.36), rgba(0, 0, 0, 0) 38%), none",
+        "ink": "rgb(233, 244, 255)",
+        "paper": "#08121f",
+        "sidebar": "linear-gradient(160deg, rgb(16, 43, 59), rgb(8, 21, 35) 65%)"
+      },
+      "sameTheme": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "label": "概念图片",
+      "theme": {
+        "backgroundColor": "rgb(8, 18, 31)",
+        "backgroundImage": "radial-gradient(at 85% 5%, rgba(48, 34, 91, 0.36), rgba(0, 0, 0, 0) 38%), none",
+        "ink": "rgb(233, 244, 255)",
+        "paper": "#08121f",
+        "sidebar": "linear-gradient(160deg, rgb(16, 43, 59), rgb(8, 21, 35) 65%)"
+      },
+      "sameTheme": true,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "label": "能力与设置",
+      "theme": {
+        "backgroundColor": "rgb(8, 18, 31)",
+        "backgroundImage": "radial-gradient(at 85% 5%, rgba(48, 34, 91, 0.36), rgba(0, 0, 0, 0) 38%), none",
+        "ink": "rgb(233, 244, 255)",
+        "paper": "#08121f",
+        "sidebar": "linear-gradient(160deg, rgb(16, 43, 59), rgb(8, 21, 35) 65%)"
+      },
+      "sameTheme": true,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "success": true
+}

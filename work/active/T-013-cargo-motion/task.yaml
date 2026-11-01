@@ -1,0 +1,25 @@
+schema_version: 3
+protocol_version: "3.0"
+id: T-013-cargo-motion
+status: tested_local_http
+goal: "Align the third workbench with the other workbenches through a vibrant animated cargo port"
+scope: [work/active/T-012-cargo-workbench/task.yaml, frontend/app/page.tsx, frontend/app/cargo-scene.tsx, frontend/app/cargo.css, docs/design/cargo-motion/, work/active/T-013-cargo-motion/, project/state.yaml]
+non_goals: [Shared homepage edits, Other workbench edits, Business step changes, Credential generation, Paid services, External publication]
+acceptance: [Luminous container and floating goods, Hover route highlighting and click transition, Eight original step mappings, Pause and reduced-motion support, Responsive browser verification]
+risk: low
+risk_reasons: [local-reversible, no-external-effects]
+protected_paths: [docs/handoff/]
+context_refs: [docs/design/cargo-motion/decision.md]
+decision_refs: [docs/design/cargo-motion/decision.md]
+evidence_refs: [docs/design/cargo-motion/manifest.json, docs/design/cargo-motion/verification.md, docs/design/cargo-motion/interaction-result.json, docs/design/cargo-motion/preview-result.json]
+approved_baseline_subject: "sha256:0978f52a798d0750e50f27a3b704c8e83648d22a22b932ef447cc7c77de91816"
+approved_baseline_ref: docs/design/cargo-motion/baseline-desktop.png
+implementation_render_subject: "sha256:facfad42687ff23999b9ed14c1e35be4720a48063e0cbff61605268e17dca226"
+implementation_render_ref: docs/design/cargo-motion/render-1440.png
+review_ref: docs/design/cargo-motion/review.md
+review_current: false
+baseline_decision_ref: docs/design/cargo-motion/decision.md
+conformance_status: pending_human_review
+implementation_started: true
+external_effects: none
+updated: "2026-11-01"

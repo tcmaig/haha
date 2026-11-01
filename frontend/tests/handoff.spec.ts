@@ -26,10 +26,6 @@ test("G4 and G5 forms, exact approvals, receipt and responsive states", async ({
   page.on("pageerror", (e) => errors.push(e.message));
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto("/");
-  await page
-    .getByLabel("本地身份凭证")
-    .fill(readFileSync(path.join(handoffDir, "token"), "utf8").trim());
-  await page.getByRole("button", { name: "进入工作区 →" }).click();
   await page.locator(".case-row").first().click();
   await page.getByRole("tab", { name: "样品与交接", exact: true }).click();
   await page

@@ -1,0 +1,68 @@
+{
+  "baseURL": "http://127.0.0.1:3314",
+  "viewports": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "hiddenArt": false,
+      "violations": []
+    },
+    {
+      "width": 980,
+      "overflow": false,
+      "hiddenArt": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "hiddenArt": false,
+      "violations": []
+    }
+  ],
+  "entries": [
+    {
+      "commodity": "文具",
+      "step": "证据来源",
+      "selected": true
+    },
+    {
+      "commodity": "家电",
+      "step": "用户反馈研究",
+      "selected": true
+    },
+    {
+      "commodity": "零部件",
+      "step": "产品机会",
+      "selected": true
+    },
+    {
+      "commodity": "五金工具",
+      "step": "产品方案与规格",
+      "selected": true
+    },
+    {
+      "commodity": "电子组件",
+      "step": "成本与风险",
+      "selected": true
+    },
+    {
+      "commodity": "视觉样件",
+      "step": "概念图片",
+      "selected": true
+    },
+    {
+      "commodity": "样品箱",
+      "step": "样品与交接",
+      "selected": true
+    },
+    {
+      "commodity": "包装材料",
+      "step": "内部交接资料",
+      "selected": true
+    }
+  ],
+  "pageErrors": [],
+  "httpOnly": true,
+  "success": true
+}

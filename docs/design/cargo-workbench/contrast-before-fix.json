@@ -1,0 +1,35 @@
+{
+  "baseURL": "http://127.0.0.1:3314",
+  "viewports": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "hiddenArt": false,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "html": "<small>01</small>",
+              "target": [
+                ".case-row:nth-child(2) > .case-title > small"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #70816c, background color: #f5f3ed, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<small>02</small>",
+              "target": [
+                ".case-row:nth-child(3) > .case-title > small"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.75 (foreground color: #70816c, background color: #f5f3ed, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "entries": [],
+  "pageErrors": [],
+  "success": false,
+  "failure": "expect(received).toEqual(expected) // deep equality\n\n- Expected  -  1\n+ Received  + 23\n\n- Array []\n+ Array [\n+   Object {\n+     \"id\": \"color-contrast\",\n+     \"nodes\": Array [\n+       Object {\n+         \"html\": \"<small>01</small>\",\n+         \"summary\": \"Fix any of the following:\n+   Element has insufficient color contrast of 3.75 (foreground color: #70816c, background color: #f5f3ed, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1\",\n+         \"target\": Array [\n+           \".case-row:nth-child(2) > .case-title > small\",\n+         ],\n+       },\n+       Object {\n+         \"html\": \"<small>02</small>\",\n+         \"summary\": \"Fix any of the following:\n+   Element has insufficient color contrast of 3.75 (foreground color: #70816c, background color: #f5f3ed, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1\",\n+         \"target\": Array [\n+           \".case-row:nth-child(3) > .case-title > small\",\n+         ],\n+       },\n+     ],\n+   },\n+ ]"
+}

@@ -1,0 +1,104 @@
+/* Shared content surfaces for every LaunchCase workbench page. */
+.cargo-workbench {
+  color-scheme: dark;
+  --rust: #f2b196;
+  --amber: #f6d29a;
+}
+.cargo-workbench .case-tabs button.selected {
+  color: #9ef1ef;
+  border-bottom-color: #78e6e7;
+}
+.cargo-workbench .brief-paper,
+.cargo-workbench .concept,
+.cargo-workbench .economics-summary {
+  border-top-color: #4c9cab;
+}
+.cargo-workbench .concept:nth-child(2n) {
+  border-top-color: #d19c8c;
+}
+.cargo-workbench .import-panel,
+.cargo-workbench .evidence-focus,
+.cargo-workbench .economics-summary {
+  background: #102333;
+}
+.cargo-workbench .import-panel {
+  border-color: #6b93a6;
+}
+.cargo-workbench .evidence-row:hover,
+.cargo-workbench .download:hover {
+  background: #1d384b;
+}
+.cargo-workbench .research-note,
+.cargo-workbench .review-warning,
+.cargo-workbench .blockers {
+  background: #302a25;
+  color: #f6d29a;
+}
+.cargo-workbench .research-note {
+  border-left-color: #d8b673;
+}
+.cargo-workbench .badge:not(.amber):not(.green) {
+  color: #c5e8f6;
+  background: #1b3545;
+  border-color: #547789;
+}
+.cargo-workbench .badge.green {
+  color: #b7f2d8;
+  background: #173b36;
+  border-color: #4a8b79;
+}
+.cargo-workbench .opportunity-no,
+.cargo-workbench .timeline li > span {
+  color: #9bbfd0;
+}
+.cargo-workbench .gate-step::before {
+  border-left-color: #527789;
+}
+.cargo-workbench .gate-step b {
+  border-color: #6b95a5;
+}
+.cargo-workbench .gate-step b.complete {
+  background: #1a4d5c;
+  color: #defaf5;
+  border-color: #65cbbd;
+}
+.cargo-workbench input,
+.cargo-workbench textarea,
+.cargo-workbench select {
+  border-color: #6f93a3;
+  accent-color: #89e8e4;
+}
+.cargo-workbench .check input {
+  accent-color: #89e8e4;
+}
+.cargo-workbench .download {
+  border-color: #7097a4;
+  color: #cbebf6;
+}
+.cargo-workbench .file-picker,
+.cargo-workbench .primary-link {
+  background: #1a4d5c;
+  color: #e9fcff;
+}
+.cargo-workbench .error {
+  background: #3c252b;
+  color: #ffccc0;
+}
+.cargo-workbench .notice {
+  background: #173c36;
+  color: #c3f4dc;
+}
+.cargo-workbench .modal::backdrop {
+  background: #030d1bd9;
+}
+.cargo-workbench summary:focus-visible {
+  outline: 2px solid #a3f5f0;
+  outline-offset: 5px;
+}
+
+@media (max-width: 760px) {
+  .cargo-workbench .case-tabs {
+    margin-right: -18px;
+    padding-right: 18px;
+  }
+}

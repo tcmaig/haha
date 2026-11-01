@@ -1,0 +1,28 @@
+{
+  "baseURL": "http://127.0.0.1:3310",
+  "previewOnly": true,
+  "viewports": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "hiddenArt": false,
+      "violations": []
+    },
+    {
+      "width": 980,
+      "overflow": false,
+      "hiddenArt": false,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "hiddenArt": false,
+      "violations": []
+    }
+  ],
+  "entries": [],
+  "pageErrors": [],
+  "httpOnly": true,
+  "success": true
+}

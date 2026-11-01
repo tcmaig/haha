@@ -1,0 +1,34 @@
+{
+  "base": "http://127.0.0.1:3310",
+  "viewports": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "readoutClear": true
+    },
+    {
+      "width": 980,
+      "overflow": false,
+      "violations": [],
+      "readoutClear": true
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "readoutClear": true
+    }
+  ],
+  "routes": [],
+  "errors": [],
+  "motion": {
+    "floating": true,
+    "hoverRoute": true,
+    "pause": true,
+    "resume": true,
+    "reduced": true
+  },
+  "success": true,
+  "httpOnly": true
+}

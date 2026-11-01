@@ -1,0 +1,26 @@
+{
+  "schema_version": 3,
+  "protocol_version": "3.0",
+  "base": "13bfd8ba088ab671978cfc5463f2626a58c6e563",
+  "head": "13bfd8ba088ab671978cfc5463f2626a58c6e563",
+  "implementation_subject": "sha256:4646f5c0e7dd1ebffce171836c610e76785a21008de4507c05731872241cf0b4",
+  "source_ref": "docs/design/cargo-motion/source-subject.json",
+  "sourceFiles": {
+    "frontend/app/page.tsx": "2a5b1e05cd0cbc2cf7d1b1bbc3b47b406352450707060d98f85a02e4ef9cf950",
+    "frontend/app/cargo-scene.tsx": "a0d08a46e8cdb9fe03afcf617d1e6502ef92066cd453680e535573e9b2bbe901",
+    "frontend/app/cargo.css": "52f53b5323c043a37b1ef20b3c086e1a521aab596674f2725d34415b4e59a2cc",
+    "frontend/app/cargo-product.tsx": "27eb56ffcc94261a7c639a7af587bb70dca649a78682396c01731307f6b8d296",
+    "frontend/app/globals.css": "69dfc1185381d9cb5408865dafd6139a6cbeaf76c648b8a5ba5d4781f7248615",
+    "frontend/app/api/session/route.ts": "9fdd780b3337ae43924b669bde689a26265680e2e2477c2c53e7ca5df1143383",
+    "frontend/app/labels.ts": "522c633cfdad10b70c0ed99da402290bf5e1fed3f885a1afd1b9c7f85eeaed1f",
+    "frontend/app/handoff.tsx": "40537c42ed8f6eae47a19ffb960b45a1845d5f7029da77bc421f315afa1c0c3d"
+  },
+  "baseline_subject": "sha256:0978f52a798d0750e50f27a3b704c8e83648d22a22b932ef447cc7c77de91816",
+  "implementation_render_subject": "sha256:facfad42687ff23999b9ed14c1e35be4720a48063e0cbff61605268e17dca226",
+  "renders": {
+    "render-1440.png": "facfad42687ff23999b9ed14c1e35be4720a48063e0cbff61605268e17dca226",
+    "render-980.png": "c444359f25097d4c0402c122ce6b118cc435cb0d54d0a86417585ebd3115dd6c",
+    "render-390.png": "c66d74c350f721deb51423dbf257253fecc6e60cab3d996171511c3cc6069e36"
+  },
+  "external_effects": "none"
+}
